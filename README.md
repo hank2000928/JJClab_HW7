@@ -37,3 +37,15 @@
 解除鎖定後，再次刪除:  
 <img width="928" height="124" alt="image" src="https://github.com/user-attachments/assets/57908cc0-a125-4781-8318-fc69a9204741" />
 
+## 8-2.
+準備題目指定的檔案，確認後新增user.author=Alice，再驗證:  
+<img width="922" height="196" alt="image" src="https://github.com/user-attachments/assets/d92bf8ec-0388-4513-af66-bb12a5a93353" />
+
+新增 user.security_level=confidential，確認後，查看全部 Extended Attributes:  
+<img width="926" height="252" alt="image" src="https://github.com/user-attachments/assets/367acb5e-b41d-46c0-b0d0-776e3e701562" />
+
+作者改成 Bob，安全等級也修改，最後移除user.security_level後，再次確認:  
+<img width="923" height="359" alt="image" src="https://github.com/user-attachments/assets/1f89f571-b6ed-4a6f-b1e9-956607eb80eb" />
+
+
+
