@@ -21,3 +21,19 @@
 <img width="933" height="234" alt="image" src="https://github.com/user-attachments/assets/5cbe4f14-daf0-4166-b4be-b41f6c1487d5" />
 
 ## 8-1-3.
+先建立一組測試資料，並確認預設attributes: 
+<img width="929" height="341" alt="image" src="https://github.com/user-attachments/assets/940124ee-580f-4a97-a8f0-bf48936e61aa" />
+
+遞迴鎖定後，測試是否真的被鎖住:  
+<img width="927" height="327" alt="image" src="https://github.com/user-attachments/assets/2356d6ab-511e-4308-b5fc-b7dcf7a41deb" />
+
+## 8-1-4.
+模擬故障情境，先建立測試檔案，鎖住後確認:  
+<img width="933" height="202" alt="image" src="https://github.com/user-attachments/assets/ae629c57-5988-4d7e-bf76-15a38293c5fc" />
+
+模擬發現故障後，啟動排查，首先確認一般權限，無誤後，確認File Attributes得到immutable:  
+<img width="927" height="133" alt="image" src="https://github.com/user-attachments/assets/1ca8644f-2cd2-472c-beee-0874fa05efeb" />
+
+解除鎖定後，再次刪除:  
+<img width="928" height="124" alt="image" src="https://github.com/user-attachments/assets/57908cc0-a125-4781-8318-fc69a9204741" />
+
