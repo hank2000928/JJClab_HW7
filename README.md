@@ -113,3 +113,35 @@
 
 ------------------------------------------------
 # 練習 10. 管線、重導向與區間擷取
+
+## 參照表
+| 符號 | 意義 |
+|---|---|
+| `\|` | 前一個指令的輸出交給下一個指令 |
+| `>` | 覆蓋寫入檔案 |
+| `>>` | 追加到檔案尾端 |
+| `2>` | 將錯誤訊息 stderr 重導向 |
+| `/dev/null` | 丟棄資料 |
+
+## 10-1. 系統日誌即時擷取與轉向寫入
+題目要求從系統 log 的最後 50 行找出包含 CRON 的行，而且不分大小寫，最後覆蓋寫入 /tmp/cron_recent.log。SLES 上可能使用 /var/log/messages，題目也允許依實際環境調整:  
+<img width="928" height="165" alt="image" src="https://github.com/user-attachments/assets/2af2ab66-f50f-41ce-bd3b-2ea6c6e1dfe9" />
+
+## 10-2. 歷史資料附加與統計累計
+確認帳號數後，因為 /var/log/ 通常需要 root 權限，使用<wc -l /etc/passwd | sudo tee -a /var/log/user_count.log>，再寫入寫時間戳:  
+<img width="929" height="233" alt="image" src="https://github.com/user-attachments/assets/2648e916-71f6-4815-83e2-0baf409d9a0b" />
+
+## 10-3. 檔案指定區間擷取
+在家目錄建立測試資料後，執行測試:  
+<img width="932" height="594" alt="image" src="https://github.com/user-attachments/assets/b3438283-48e9-4e25-b0a9-e972fce7a138" />
+<img width="929" height="253" alt="image" src="https://github.com/user-attachments/assets/6d141348-2889-46d9-bd85-353fba604f56" />
+
+## 10-4. 錯誤訊息分離與重導向
+<img width="927" height="83" alt="image" src="https://github.com/user-attachments/assets/ba9fde5d-461d-4490-a367-26a7115aa8a1" />
+
+終端畫面沒有輸出，再次確認:  
+<img width="931" height="756" alt="image" src="https://github.com/user-attachments/assets/3fa72f4d-6657-4541-8514-9d18a0cef30b" />
+
+
+
+
